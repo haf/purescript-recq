@@ -1,0 +1,8 @@
+
+{
+  "name": "cmdui",
+  "private": true,
+  "devDependencies": {
+    "purescript-prelude": "~0.1.0"
+  }
+}

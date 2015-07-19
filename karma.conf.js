@@ -1,4 +1,5 @@
-var webpack = require('webpack');
+var webpack = require('webpack'),
+    wpcfg   = require('./webpack.conf.js')
 
 module.exports = function(config) {
   config.set({
@@ -14,14 +15,7 @@ module.exports = function(config) {
     preprocessors: {
       'tests/*': ['webpack']
     },
-    webpack: {
-      resolve: {
-        extensions: ['', '.js', '.coffee']
-      },
-      module: {
-        loaders: [{ test: /\.coffee$/, loader: 'coffee-loader' }]
-      }
-    },
+    webpack: wpcfg,
     webpackMiddleware: {
       stats: { colors: true }
     },

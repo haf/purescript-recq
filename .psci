@@ -1,0 +1,4 @@
+:m bower_components/purescript-prelude/src/Prelude.purs
+:m src/Foo.purs
+:m src/Foo/Bar.purs
+:f bower_components/purescript-prelude/src/Prelude.js
