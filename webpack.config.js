@@ -15,7 +15,7 @@ module.exports = {
     filename: "bundle.js"
   },
   resolve: {
-    extensions: ['', '.js', '.coffee'],
+    extensions: ['', '.js', '.coffee', '.purs'],
     modulesDirectories: modulesDirectories
   },
   module: {
