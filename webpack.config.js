@@ -12,25 +12,19 @@ module.exports = {
   entry: './src/index',
   output: {
     path: __dirname + '/' + output,
-    pathinfo: true,
     filename: "bundle.js"
   },
   resolve: {
     extensions: ['', '.js', '.coffee', '.purs'],
-    modulesDirectories: modulesDirectories
+    modulesDirectories: modulesDirectories,
   },
   module: {
     loaders: [
       { test: /\.coffee$/, loader: 'coffee-loader' },
-      { test: /\.purs$/, loader: 'purs-loader?output=' + output + '&' + srcs.concat(ffis).join('&') }
+      { test: /\.purs$/, loader: 'purs-loader?output=' + output + '&' + srcs.concat(ffis).join('&') },
     ]
   },
-  externals: {
-    React: 'react'
-  },
   plugins: [
-    new webpack.ProvidePlugin({
-      React: "react"
-    })
+    new webpack.ProvidePlugin({ React: 'react' })
   ]
 }

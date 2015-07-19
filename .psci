@@ -152,8 +152,6 @@
 :m bower_components/purescript-tuples/src/Data/Tuple.purs
 :m bower_components/purescript-tuples/src/Data/Tuple/Nested.purs
 :m bower_components/purescript-unfoldable/src/Data/Unfoldable.purs
-:m src/Foo.purs
-:m src/Foo/Bar.purs
 :m src/Main.purs
 :m src/ReCQ.purs
 :f bower_components/purescript-arrays/src/Data/Array.js
