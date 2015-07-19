@@ -5,7 +5,6 @@ var output = 'build';
 
 var modulesDirectories = [
   'node_modules',
-  'bower_components/purescript-prelude/src',
   output
 ];
 module.exports = {
@@ -23,5 +22,8 @@ module.exports = {
       { test: /\.coffee$/, loader: 'coffee-loader' },
       { test: /\.purs$/, loader: 'purs-loader?output=' + output + '&' + srcs.concat(ffis).join('&') }
     ]
+  },
+  externals: {
+    'react': 'React'
   }
 }

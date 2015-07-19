@@ -1,10 +1,10 @@
-module ReCQ (execCommand) where
+module ReCQ (execCommand, JSCommand(..), JSEvent(..)) where
 
+import Data.List
 import Prelude
-import Debug.Trace
 
-data JSCmd = JSCmd { name :: String }
+data JSCommand = JSCommand { type :: String }
+data JSEvent = JSEvent { type :: String, dataJson :: String, opportunistic :: Boolean }
 
-execCommand _ = unit
-
-
+execCommand :: JSCommand -> JSEvent
+execCommand cmd = JSEvent { type: "apa", dataJson: "{}", opportunistic: true }

@@ -1,6 +1,6 @@
 chai = require 'chai'
-recq = require '../src/ReCQ.purs'
+recq = require '../src/ReCQ'
 
 describe 'ReCQ', ->
-  it 'smokey', ->
-    1337
+  it 'has execCommand', ->
+    chai.expect(recq).to.have.property('execCommand')
