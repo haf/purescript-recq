@@ -155,6 +155,7 @@
 :m src/Foo.purs
 :m src/Foo/Bar.purs
 :m src/Main.purs
+:m src/ReCQ.purs
 :f bower_components/purescript-arrays/src/Data/Array.js
 :f bower_components/purescript-arrays/src/Data/Array/ST.js
 :f bower_components/purescript-arrays/src/Data/Array/Unsafe.js
