@@ -8,8 +8,8 @@ describe("a-test", function() {
     if(f() !== 53) throw new Error("module didn't export ok");
   });
 
-  //it("should use loaders", function() {
-  //  var f = require("../fixtures/index.coffee");
-  //  if(f() !== 53) throw new Error("module didn't export ok");
-  //});
+  it("should use loaders", function() {
+    var f = require("../src/index.coffee");
+    if(f() !== 53) throw new Error("module didn't export ok");
+  });
 });

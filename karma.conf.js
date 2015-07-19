@@ -18,7 +18,7 @@ module.exports = function(config) {
         extensions: ["", ".js"]
       },
       module: {
-        loaders: []
+        loaders: [{ test: /\.coffee$/, loader: 'coffee-loader' }]
       }
     },
     webpackMiddleware: {
