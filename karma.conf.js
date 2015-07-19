@@ -3,9 +3,10 @@ var webpack = require('webpack');
 module.exports = function(config) {
   config.set({
     basePath: '',
-    frameworks: ['mocha'],
+    frameworks: ['chai', 'mocha'],
     files: [
-      'tests/index.js',
+      'tests/**/*.js',
+      'tests/**/*.coffee'
     ],
     exclude: [
       '**/*.swp'
@@ -15,7 +16,7 @@ module.exports = function(config) {
     },
     webpack: {
       resolve: {
-        extensions: ["", ".js"]
+        extensions: ['', '.js', '.coffee']
       },
       module: {
         loaders: [{ test: /\.coffee$/, loader: 'coffee-loader' }]
@@ -34,6 +35,7 @@ module.exports = function(config) {
     captureTimeout: 60000,
     plugins: [
       require("karma-mocha"),
+      require("karma-chai"),
       require("karma-spec-reporter"),
       require("karma-chrome-launcher"),
       require("karma-webpack"),
