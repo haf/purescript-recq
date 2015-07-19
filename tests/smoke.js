@@ -4,7 +4,7 @@ describe("a-test", function() {
   });
 
   it("should require a file", function() {
-    var f = require("../src/index.js");
+    var f = require("../src/smoke");
     if(f() !== 53) throw new Error("module didn't export ok");
   });
 

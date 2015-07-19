@@ -1,1 +1,2 @@
-module.exports = function() { return 53; };
+var Prelude = require('Prelude');
+module.exports = require('./Main.purs').main();

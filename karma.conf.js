@@ -1,5 +1,5 @@
 var webpack = require('webpack'),
-    wpcfg   = require('./webpack.conf.js')
+    wpcfg   = require('./webpack.config.js')
 
 module.exports = function(config) {
   config.set({
