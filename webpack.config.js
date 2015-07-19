@@ -2,6 +2,7 @@ var path = require('path');
 var srcs = ['src[]=bower_components/purescript-*/src/**/*.purs', 'src[]=src/**/*.purs'];
 var ffis = ['ffi[]=bower_components/purescript-*/src/**/*.js', 'ffi[]=src/**/*FFI.js'];
 var output = 'build';
+var webpack = require('webpack');
 
 var modulesDirectories = [
   'node_modules',
@@ -11,6 +12,7 @@ module.exports = {
   entry: './src/index',
   output: {
     path: __dirname + '/' + output,
+    pathinfo: true,
     filename: "bundle.js"
   },
   resolve: {
@@ -24,6 +26,11 @@ module.exports = {
     ]
   },
   externals: {
-    'react': 'React'
-  }
+    React: 'react'
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      React: "react"
+    })
+  ]
 }

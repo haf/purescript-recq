@@ -4,12 +4,12 @@ describe("a-test", function() {
   });
 
   it("should require a file", function() {
-    var f = require("../src/smoke");
+    var f = require("../src/smoke/smoke");
     if(f() !== 53) throw new Error("module didn't export ok");
   });
 
   it("should use loaders", function() {
-    var f = require("../src/index.coffee");
+    var f = require("../src/smoke/example");
     if(f() !== 53) throw new Error("module didn't export ok");
   });
 });
