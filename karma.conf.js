@@ -1,6 +1,3 @@
-var wpcfg = require('./webpack.config');
-wpcfg.devtool = 'inline-source-map';
-
 var webpack = require('webpack');
 
 module.exports = function(config) {
@@ -18,17 +15,10 @@ module.exports = function(config) {
     },
     webpack: {
       resolve: {
-        extensions: ["", ".js", ".coffee"]
+        extensions: ["", ".js"]
       },
       module: {
-        loaders: [
-          {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loaders: 'babel-loader'
-          },
-          { test: /\.coffee$/, loader: "coffee-loader" }
-        ]
+        loaders: []
       }
     },
     webpackMiddleware: {
@@ -37,7 +27,7 @@ module.exports = function(config) {
     reporters: ['progress'],
     port: 9876,
     colors: true,
-    logLevel: config.LOG_INFO,
+    logLevel: config.LOG_DEBUG,
     autoWatch: true,
     browsers: ['Chrome'], //browsers: ['Chrome', 'Firefox', 'PhantomJS'],
     singleRun: false,
